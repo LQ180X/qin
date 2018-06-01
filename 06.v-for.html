@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <h1>v-for="item in arr"</h1>
+        <!-- 此处的item是数组里的每一项 -->
+        <p v-for="item in user">{{item.name+":"+item.age}}</p>
+        <h1>v-for="(item,index) in arr"</h1>
+        <p v-for="(item,index) in user">{{item.name}}:{{item.age}}:索引{{index}}</p>
+        
+
+
+        <h1>v-for="vlaue in obj"</h1>
+        <p v-for="vlaue in boss">{{vlaue}}</p>
+        <h1>v-for="(vlaue,key,index) in obj"</h1>
+        <p v-for="(vlaue,key,index) in boss">{{vlaue}}----{{index}}----{{key}}</p>
+
+    </div>
+    <script src="./vue2.js"></script>
+    <script>
+      var vm = new Vue({
+          el:"#app",
+          data:{
+              user:[
+                  {name:'jack',age:12},
+                  {name:'rose',age:13}
+              ],
+              boss:{
+                  name:'mayun',
+                  age:111
+              }
+          }
+      })
+    </script>
+</body>
+</html>
