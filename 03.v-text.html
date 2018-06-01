@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 
+            v-text指令与插值表达是一样，都可以用来渲染文本,凡是v-开头的就是指令,指令的功能增强html标签的功能
+            使用:在标签属性位置上写
+
+            v-text指令的语法:用于解析文本类的数据
+                v-text="属性名"
+
+            v-text和插值表达式使用上的区别:
+            插值表达式写在innerHTML位置,v-text写在标签属性位置,通常推荐使用{{}}
+         -->
+        <div v-text="name"></div>
+        <div v-text="age"></div>
+    </div>
+    <script src="./vue2.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                name:"zs",
+                age:18,
+                sex:"男"
+            }
+
+
+        })
+    
+    
+    </script>
+</body>
+</html>
